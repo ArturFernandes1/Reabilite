@@ -6,7 +6,6 @@ import HeroSectionInfor from "../components/HeroSectionInfor";
 import CardIcons from "../components/CardIcons";
 import TeamSection from "../components/TeamSection";
 import ServicesSection from "../components/ServicesSection";
-import ComponentLocation from "../components/Component-Location/ComponentLocation"
 import AboutMy from "../components/AboutMy";
 
 {/*  <TeamSection/> */}
@@ -18,7 +17,7 @@ export default function Home() {
       <ServicesSection/>
       <HeroSectionInfor/>
       <AboutMy/>
-      <ComponentLocation/>
+   
     </>
   );
 }
