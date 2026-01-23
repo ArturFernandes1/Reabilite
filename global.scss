@@ -1,0 +1,15 @@
+/* Aplica a fonte em todo o site */
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400; /* peso normal */
+}
+
+/* Títulos com peso maior */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; /* mais marcante */
+}
+
+/* Exemplo de texto mais leve */
+p, span, li {
+  font-weight: 300; /* mais fino */
+}
