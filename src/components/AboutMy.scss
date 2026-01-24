@@ -1,5 +1,5 @@
 .about-section {
-  padding: 100px 40px;
+  padding: 100px 0px 140px 0px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@
 
   .about-image-area img {
     max-width: 100%;
-    height: auto; /* melhor para responsivo */
+    height: 380px; /* melhor para responsivo */
     border-radius: 100px; /* opcional, reduz pra ficar melhor em mobile */
   }
 }

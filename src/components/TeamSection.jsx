@@ -1,55 +1,75 @@
 import React from "react";
 import "./TeamSection.scss";
-import menberOne from "../assets/menber_chat1.png";
-import memberTwo from "../assets/menber_two.png";
-import memberTree from "../assets/menber_tree.png";
-import memberFour from "../assets/menber_four.png";
 
-export default function EquipeReabilite() {
+import menberOne from "../assets/menber_chat1.png";
+
+export default function TeamSection() {
   return (
     <section className="team-section">
       <div className="team-container">
 
-        <h2 className="team-title">Equipe Especializada</h2>
+        <h2 className="team-title">Nossa equipe</h2>
+
         <p className="team-subtitle">
-          Uma equipe preparada para oferecer cuidado, acolhimento e resultados.
+          Profissionais qualificados, com olhar humano e atendimento individualizado
         </p>
 
-        <div className="team-cards">
+        <div className="team-grid">
 
-          <div className="team-card-single">
+          <div className="team-member">
             <img
               src={menberOne}
-              alt="Membro da equipe"
-              className="team-photo"
+              alt="Dra. Danyella Ribeiro"
             />
+         {/*    <h3>Dra. Danyella Ribeiro</h3>
+            <span>Psiquiatria</span>
+            <p>
+              Atendimento focado em saúde mental, com escuta ativa, ética e
+              tratamento personalizado para cada paciente.
+            </p> */}
           </div>
 
-          <div className="team-card-single">
+           <div className="team-member">
             <img
               src={menberOne}
-              alt="Membro da equipe"
-              className="team-photo"
+              alt="Dra. Danyella Ribeiro"
             />
+           {/*  <h3>Dra. Danyella Ribeiro</h3>
+            <span>Psiquiatria</span>
+            <p>
+              Atendimento focado em saúde mental, com escuta ativa, ética e
+              tratamento personalizado para cada paciente.
+            </p> */}
           </div>
 
-          <div className="team-card-single">
-            <img
+           <div className="team-member">
+             <img
               src={menberOne}
-              alt="Membro da equipe"
-              className="team-photo"
+              alt="Dra. Danyella Ribeiro"
             />
+           {/*  <h3>Dra. Danyella Ribeiro</h3>
+            <span>Psiquiatria</span>
+            <p>
+              Atendimento focado em saúde mental, com escuta ativa, ética e
+              tratamento personalizado para cada paciente.
+            </p> */}
           </div>
 
-          <div className="team-card-single">
-            <img
+          <div className="team-member">
+             <img
               src={menberOne}
-              alt="Membro da equipe"
-              className="team-photo"
+              alt="Dra. Danyella Ribeiro"
             />
+          {/*   <h3>Dr. Paulo Freitas</h3>
+            <span>Psiquiatria</span>
+            <p>
+              Experiência no acompanhamento de transtornos emocionais e
+              comportamentais, com abordagem baseada em evidências.
+            </p> */}
           </div>
 
         </div>
+
       </div>
     </section>
   );
