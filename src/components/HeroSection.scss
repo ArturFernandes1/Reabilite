@@ -1,78 +1,97 @@
 .text-image-section {
   display: flex;
   justify-content: center;
-  padding: 3rem ;
+  padding: 9rem 3rem 0; // remove padding inferior
   position: relative;
-/*   background-image: url('/assets/sobre-nos.png'); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #FAF5EF;
- 
- 
+  overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0.7) 100%);
-    z-index: 1;
-  }
+  background: linear-gradient(
+    155deg,
+    #C9C5A3 0%,
+    #CAC5A3 35%,
+    #D4D2B6 80%,
+    #DEDAC4 100%
+  );
 
   .control-space-presentation {
     display: flex;
-    align-items: center;
+    align-items: stretch; // permite alinhar a imagem no bottom
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    gap: 2rem;
+    gap: 3rem;
     position: relative;
     z-index: 2;
 
     .text-container {
       flex: 1;
-      max-width: 550px;
+      max-width: 600px;
+      padding-bottom: 3rem;
 
       h2 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
         color: #0f1a2d;
-        font-weight: 700;
+        font-weight: 400;
+        font-family: 'Marcellus', serif;
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.7;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
         color: #333;
+        font-family: 'Quicksand', sans-serif;
       }
 
-      button {
-        padding: 0.8rem 1.5rem;
-        background-color: #CFB024;
-        color: white;
-        border: none;
+      .buttons-container {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 0.9rem 1.6rem;
         border-radius: 8px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        font-family: 'Quicksand', sans-serif;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+
+      .btn-primary {
+        background-color: #CFB024;
+        color: #fff;
+        border: none;
 
         &:hover {
           background-color: #86731c;
         }
       }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: #86731c;
+        border: 1.5px solid #86731c;
+
+        &:hover {
+          background-color: #86731c;
+          color: #fff;
+        }
+      }
     }
 
     .image-container {
-  
+      display: flex;
+      align-items: flex-end; // cola no bottom
+      justify-content: center;
 
       img {
         width: 100%;
         max-width: 550px;
         height: auto;
-
+        display: block;
+        margin-bottom: 0;
       }
     }
   }
@@ -81,35 +100,39 @@
 /* Responsivo */
 @media (max-width: 992px) {
   .text-image-section {
+    padding: 2rem 1.5rem 0;
+
     .control-space-presentation {
       flex-direction: column;
-      text-align: left; // Mudado de center para left
 
       .text-container {
         max-width: 100%;
-        text-align: left; // Garante que o container de texto fique à esquerda
-        
+        padding-bottom: 2rem;
+
         h2 {
           font-size: 1.8rem;
-          text-align: left; // Título alinhado à esquerda
-          margin-bottom: 1rem;
         }
-        
+
         p {
-          text-align: justify; // Texto justify em mobile
           font-size: 1rem;
-          line-height: 1.7;
-          margin-bottom: 1.5rem;
+          text-align: justify;
         }
-        
-        button {
-          text-align: left; // Botão alinhado à esquerda
-          align-self: flex-start; // Alinha o botão à esquerda
+
+        .buttons-container {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+          width: 100%;
+          text-align: center;
         }
       }
 
       .image-container {
-        margin-top: 2rem;
+        align-items: flex-end;
+        margin-top: 1.5rem;
 
         img {
           max-width: 100%;

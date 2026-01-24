@@ -1,0 +1,191 @@
+.section-footer {
+  background: linear-gradient(
+    to right,
+    #0d2d1c,
+    #103824,
+    #0d2d1c
+  );
+  color: #fff;
+  padding-top: 3rem;
+}
+
+/* ================= CONTAINER ================= */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "logo links contato redes";
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 2.5rem;
+  padding: 0 2rem 3rem;
+}
+
+/* ================= COLUNAS ================= */
+.footer-column {
+  position: relative;
+  padding-left: 2rem;
+
+  h4 {
+    font-family: 'Marcellus', serif;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #e6f0c8;
+  }
+
+  p,
+  li,
+  span {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #fff;
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* ================= LINHA VERTICAL (DESKTOP) ================= */
+.footer-column:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5%;
+  height: 90%;
+  width: 1px;
+  background: rgba(216, 230, 184, 0.4);
+}
+
+/* ================= ÁREAS DO GRID ================= */
+.logo-column {
+  grid-area: logo;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-column:nth-of-type(2) {
+  grid-area: links;
+}
+
+.footer-column:nth-of-type(3) {
+  grid-area: contato;
+}
+
+.footer-column:nth-of-type(4) {
+  grid-area: redes;
+}
+
+/* ================= LOGO ================= */
+.footer-logo-img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= LISTAS COM ÍCONES ================= */
+.footer-links,
+.footer-contact,
+.footer-social {
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+
+    img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    span {
+      transition: color 0.3s ease;
+    }
+
+    &:hover span {
+      color: #e6f0c8;
+    }
+  }
+}
+
+/* ================= FOOTER INFERIOR ================= */
+.footer-bottom {
+  border-top: 1px solid #C39291;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+
+  a {
+    display: block;
+    margin-top: 0.5rem;
+    color: #e6f0c8;
+    text-decoration: underline;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo links"
+      "contato redes";
+  }
+
+  .footer-column {
+    padding-left: 0;
+  }
+
+  .footer-column::before {
+    display: none;
+  }
+
+  .footer-logo-img {
+    max-width: 180px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "links"
+      "contato"
+      "redes";
+  }
+
+  .footer-column {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  /* 🔥 LINHA HORIZONTAL NO MOBILE */
+  .footer-column:not(:first-child)::before {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(216, 230, 184, 0.4);
+  }
+
+  .logo-column {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .footer-logo-img {
+    max-width: 140px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSectionInfor.scss";
-import whatsapp from "../assets/whatsapp.png";
+import whatsapp from "../assets/icons/icon_whatsapp.png";
 
 const HeroSectionInfor = () => {
   const handleWhatsApp = () => {
