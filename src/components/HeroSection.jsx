@@ -22,7 +22,6 @@ export default function HeroSection() {
             integral.
           </p>
 
-          {/* Botões */}
           <div className="buttons-container">
             <button className="btn-primary">
               Quero atendimento presencial

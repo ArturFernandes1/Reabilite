@@ -8,7 +8,6 @@ const AboutDanyella = () => {
     <section className="about-section" id="sobre">
       <div className="about-container">
 
-        {/* Texto */}
         <div className="about-text-area">
           <h2 className="about-title">Quem é Danyella Ribeiro?</h2>
 
@@ -37,7 +36,6 @@ const AboutDanyella = () => {
           </p>
         </div>
 
-        {/* Imagem */}
         <div className="about-image-area">
           <img src={imgBackground} alt="Danyella Ribeiro" />
         </div>

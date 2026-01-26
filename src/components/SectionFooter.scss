@@ -1,15 +1,15 @@
 .section-footer {
-  background: linear-gradient(
+/*   background: linear-gradient(
     to right,
     #0d2d1c,
     #103824,
     #0d2d1c
-  );
+  ); */
+  background-color: #C39291;
   color: #fff;
   padding-top: 3rem;
 }
 
-/* ================= CONTAINER ================= */
 .footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -20,7 +20,6 @@
   padding: 0 2rem 3rem;
 }
 
-/* ================= COLUNAS ================= */
 .footer-column {
   position: relative;
   padding-left: 2rem;
@@ -48,7 +47,6 @@
   }
 }
 
-/* ================= LINHA VERTICAL (DESKTOP) ================= */
 .footer-column:not(:first-child)::before {
   content: '';
   position: absolute;
@@ -59,7 +57,6 @@
   background: rgba(216, 230, 184, 0.4);
 }
 
-/* ================= ÁREAS DO GRID ================= */
 .logo-column {
   grid-area: logo;
   padding-left: 0;
@@ -79,7 +76,6 @@
   grid-area: redes;
 }
 
-/* ================= LOGO ================= */
 .footer-logo-img {
   width: 100%;
   max-width: 240px;
@@ -87,7 +83,6 @@
   object-fit: contain;
 }
 
-/* ================= LISTAS COM ÍCONES ================= */
 .footer-links,
 .footer-contact,
 .footer-social {
@@ -117,7 +112,6 @@
   }
 }
 
-/* ================= FOOTER INFERIOR ================= */
 .footer-bottom {
   border-top: 1px solid #C39291;
   text-align: center;
@@ -132,7 +126,6 @@
   }
 }
 
-/* ================= TABLET ================= */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -154,7 +147,7 @@
   }
 }
 
-/* ================= MOBILE ================= */
+
 @media (max-width: 576px) {
   .footer-container {
     grid-template-columns: 1fr;
@@ -170,7 +163,6 @@
     padding-top: 2rem;
   }
 
-  /* 🔥 LINHA HORIZONTAL NO MOBILE */
   .footer-column:not(:first-child)::before {
     display: block;
     left: 0;

@@ -33,15 +33,15 @@
   }
 }
 
-/* ÍCONE SETA */
+
 .icon-up {
   width: 18px;
   height: auto;
-  transform: rotate(-90deg); // seta apontando para cima
+  transform: rotate(-90deg);
   transition: transform 0.3s ease;
 }
 
-/* MOBILE */
+
 @media (max-width: 576px) {
   .back-to-top {
     width: 42px;

@@ -56,7 +56,6 @@
   border-left: 4px solid #C18F90;
 }
 
-/* Área da imagem */
 .about-image-area {
   flex: 1;
   display: flex;
@@ -71,7 +70,6 @@
   }
 }
 
-/* Responsivo */
 @media (max-width: 968px) {
 
     .about-section {
@@ -83,7 +81,6 @@
     gap: 48px;
   }
 
-  /* Faz a imagem aparecer antes do texto */
   .about-image-area {
     order: -1;
   }
@@ -113,8 +110,8 @@
 
   .about-image-area img {
     max-width: 100%;
-    height: 380px; /* melhor para responsivo */
-    border-radius: 100px; /* opcional, reduz pra ficar melhor em mobile */
+    height: 380px;
+    border-radius: 100px;
   }
 }
 }

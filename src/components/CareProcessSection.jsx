@@ -52,7 +52,7 @@ export default function CareProcessSection() {
           rel="noopener noreferrer"
           className="care-button"
         >
-          Quero começar minha terapia
+          Agendar minha consulta agora
         </a>
 
       </div>

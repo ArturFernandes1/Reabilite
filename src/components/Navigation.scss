@@ -1,12 +1,10 @@
-/* Navbar principal */
 .navbar {
   width: 100%;
-  background-color: #BF9A94;
+  background-color: #e0b1a9;
   font-family: 'Quicksand', sans-serif;
   min-height: 50px;
 }
 
-/* Container interno */
 .container-fluid {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,18 +14,13 @@
   gap: 2rem;
 }
 
-/* Logo */
+
 .navbar-brand .logo {
   height: 80px;
   width: auto;
   object-fit: contain;
 }
 
-/* ===============================
-   BOTÃO HAMBURGER (CUSTOM)
-   =============================== */
-
-/* Remove qualquer estilo padrão */
 .navbar-toggler {
   border: none;
   outline: none;
@@ -43,7 +36,6 @@
   box-shadow: none;
 }
 
-/* Estrutura do ícone */
 .navbar-toggler-icon {
   width: 1.6rem;
   height: 1.4rem;
@@ -52,7 +44,6 @@
   display: block;
 }
 
-/* Linhas do hamburger */
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after,
 .navbar-toggler-icon span {
@@ -60,31 +51,25 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 3px;              /* ESPESSURA DAS LINHAS */
-  background-color: #ffffff; /* COR DAS LINHAS */
+  height: 3px;          
+  background-color: #ffffff;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Linha do meio */
 .navbar-toggler-icon span {
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Linha superior */
+
 .navbar-toggler-icon::before {
   top: 0;
 }
 
-/* Linha inferior */
 .navbar-toggler-icon::after {
   bottom: 0;
 }
-
-/* ===============================
-   MENU
-   =============================== */
 
 .navbar-nav {
   list-style: none;
@@ -126,7 +111,6 @@
   }
 }
 
-/* Botão de destaque */
 .btn-primary {
   padding: 0.5rem 1.2rem;
   background-color: #fff;
@@ -152,32 +136,24 @@
   }
 }
 
-/* ===============================
-   RESPONSIVO
-   =============================== */
-
 @media (max-width: 768px) {
-
-  /* Permite quebra correta do menu */
   .navbar-expand-lg {
     .container-fluid {
       flex-wrap: wrap;
     }
   }
 
-  /* Menu mobile */
   .navbar-nav {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
+  
 
-  /* Logo menor */
   .navbar-brand .logo {
     height: 70px;
   }
 
-  /* Botão menor */
   .btn-primary {
     padding: 0.4rem 1rem;
     font-size: 1rem;

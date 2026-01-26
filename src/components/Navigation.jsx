@@ -1,71 +1,72 @@
+import { useState } from "react";
 import "./Navigation.scss";
 import logo from "../assets/logo_copia1.png";
 
 export default function CustomNavigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
 
-        {/* Logo */}
         <a className="navbar-brand" href="#home">
           <img src={logo} alt="Logo" className="logo" />
         </a>
 
-        {/* Botão toggle (hamburger customizado) */}
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${menuOpen ? "active" : ""}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className="navbar-toggler-icon">
             <span></span>
           </span>
         </button>
 
-        {/* Menu */}
         <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
+          className={`collapse navbar-collapse justify-content-center ${
+            menuOpen ? "show" : ""
+          }`}
         >
           <ul className="navbar-nav">
 
             <li className="nav-item">
-              <a className="nav-link" href="#home">
+              <a className="nav-link" href="#home" onClick={() => setMenuOpen(false)}>
                 Home
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#sobre">
+              <a className="nav-link" href="#sobre" onClick={() => setMenuOpen(false)}>
                 Sobre Nós
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#areas">
+              <a className="nav-link" href="#areas" onClick={() => setMenuOpen(false)}>
                 Áreas de Atuação
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#contato">
+              <a className="nav-link" href="#contato" onClick={() => setMenuOpen(false)}>
                 Contato
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="btn btn-primary ms-3" href="#fale-conosco">
+              <a
+                className="btn btn-primary ms-3"
+                href="#fale-conosco"
+                onClick={() => setMenuOpen(false)}
+              >
                 Fale conosco
               </a>
             </li>
 
           </ul>
         </div>
-
       </div>
     </nav>
   );

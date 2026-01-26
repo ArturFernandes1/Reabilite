@@ -11,7 +11,6 @@ const HeroSectionInfor = () => {
     <section className="hero-container">
       <div className="hero-content">
 
-        {/* Lado esquerdo */}
         <div className="hero-left">
           <h1 className="hero-title">
             Você merece ter qualidade de vida.
@@ -19,7 +18,6 @@ const HeroSectionInfor = () => {
           </h1>
         </div>
 
-        {/* Lado direito */}
         <div className="hero-right">
           <p className="hero-description">
             Com o tratamento certo, você pode recuperar o equilíbrio e

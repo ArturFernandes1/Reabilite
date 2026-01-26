@@ -1,14 +1,10 @@
-// =========================
-// Variáveis
-// =========================
+@use "sass:color";
+
 $bg-color: #D1CFB1;
 $text-color: #1a3a2a;
 $button-bg: #112e1f;
 $white: #ffffff;
 
-// =========================
-// Hero Container
-// =========================
 .hero-container {
   background-color: $bg-color;
   padding: 90px 40px;
@@ -20,9 +16,6 @@ $white: #ffffff;
   z-index: 1;
 }
 
-// =========================
-// Conteúdo
-// =========================
 .hero-content {
   max-width: 1200px;
   width: 100%;
@@ -31,9 +24,6 @@ $white: #ffffff;
   align-items: center;
 }
 
-// =========================
-// Lado esquerdo
-// =========================
 .hero-left {
   flex: 1.4;
 }
@@ -45,12 +35,9 @@ $white: #ffffff;
   line-height: 1.15;
   margin: 0;
   letter-spacing: -0.5px;
-  font-family: 'Marcellus', serif;
+  font-family: "Marcellus", serif;
 }
 
-// =========================
-// Lado direito
-// =========================
 .hero-right {
   flex: 1;
   display: flex;
@@ -63,18 +50,15 @@ $white: #ffffff;
   font-size: 18px;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-// =========================
-// Botão WhatsApp
-// =========================
 .hero-button {
   display: flex;
   align-items: center;
   gap: 12px;
 
-  background-color: $button-bg;
+  background-color: #E0B1A9;
   color: $white;
   border: none;
   padding: 16px 28px;
@@ -82,7 +66,7 @@ $white: #ffffff;
 
   font-size: 17px;
   font-weight: 500;
-  font-family: 'Marcellus', serif;
+  font-family: "Marcellus", serif;
 
   cursor: pointer;
   width: fit-content;
@@ -91,7 +75,7 @@ $white: #ffffff;
   transition: all 0.25s ease;
 
   &:hover {
-    background-color: lighten($button-bg, 6%);
+    background-color: #CA9F97;
     transform: translateY(-2px);
   }
 }
@@ -102,9 +86,7 @@ $white: #ffffff;
   object-fit: contain;
 }
 
-// =========================
-// Responsividade
-// =========================
+/* Responsivo */
 @media (max-width: 968px) {
   .hero-container {
     padding: 80px 24px 40px;
@@ -128,6 +110,4 @@ $white: #ffffff;
     text-align: center;
     line-height: 1.3;
   }
-
-  
 }

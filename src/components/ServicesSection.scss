@@ -7,8 +7,8 @@
   border-bottom-right-radius: 50px;
 
   position: relative;
-  margin-top: -30px;// puxa para baixo, sobrepondo o hero
-  margin-bottom: -40px; // puxa para cima, sobrepondo o hero
+  margin-top: -30px;
+  margin-bottom: -40px;
   z-index: 2;
 
   .services-container {
@@ -80,7 +80,7 @@
   }
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
   .services-section {
     .services-grid {
@@ -89,7 +89,7 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .services-section {
     padding: 2.5rem 1.4rem;

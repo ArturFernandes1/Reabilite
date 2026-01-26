@@ -1,7 +1,7 @@
 .text-image-section {
   display: flex;
   justify-content: center;
-  padding: 9rem 3rem 0; // remove padding inferior
+  padding: 9rem 3rem 0;
   position: relative;
   overflow: hidden;
 
@@ -15,7 +15,7 @@
 
   .control-space-presentation {
     display: flex;
-    align-items: stretch; // permite alinhar a imagem no bottom
+    align-items: stretch;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
@@ -60,22 +60,23 @@
       }
 
       .btn-primary {
-        background-color: #CFB024;
+        background-color: #E0B1A9;
         color: #fff;
         border: none;
 
         &:hover {
-          background-color: #86731c;
+          background-color: #ca9f97;
         }
       }
 
       .btn-secondary {
         background-color: transparent;
-        color: #86731c;
-        border: 1.5px solid #86731c;
+        color: #646464;
+        border: 1.5px solid #646464;
 
         &:hover {
-          background-color: #86731c;
+          background-color:#E0B1A9;
+           border: 1.5px solid #fff;
           color: #fff;
         }
       }
@@ -83,7 +84,7 @@
 
     .image-container {
       display: flex;
-      align-items: flex-end; // cola no bottom
+      align-items: flex-end;
       justify-content: center;
 
       img {
@@ -97,7 +98,7 @@
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 992px) {
   .text-image-section {
     padding: 2rem 1.5rem 0;

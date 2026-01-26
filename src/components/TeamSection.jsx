@@ -1,7 +1,11 @@
 import React from "react";
 import "./TeamSection.scss";
 
-import menberOne from "../assets/menber_chat1.png";
+import menberOne from '../assets/menber_one.png';
+import menberTwo from '../assets/menber_two.png';
+import menberThree from '../assets/menber_three.png';
+import menberFour from '../assets/menber_four.png';
+
 
 export default function TeamSection() {
   return (
@@ -31,7 +35,7 @@ export default function TeamSection() {
 
            <div className="team-member">
             <img
-              src={menberOne}
+              src={menberTwo}
               alt="Dra. Danyella Ribeiro"
             />
            {/*  <h3>Dra. Danyella Ribeiro</h3>
@@ -44,7 +48,7 @@ export default function TeamSection() {
 
            <div className="team-member">
              <img
-              src={menberOne}
+              src={menberThree}
               alt="Dra. Danyella Ribeiro"
             />
            {/*  <h3>Dra. Danyella Ribeiro</h3>
@@ -57,7 +61,7 @@ export default function TeamSection() {
 
           <div className="team-member">
              <img
-              src={menberOne}
+              src={menberFour}
               alt="Dra. Danyella Ribeiro"
             />
           {/*   <h3>Dr. Paulo Freitas</h3>
