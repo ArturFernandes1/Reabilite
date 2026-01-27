@@ -1,5 +1,17 @@
+@use "sass:color";
+
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
+$bg-color: #ecbcb4;
+$title-color: #fff;
+$text-color: #fff;
+$button-bg: #7E9F6D;
+$button-hover: #6F8F60;
+$white: #ffffff;
+
 .team-section {
-  background-color: #fff;
+  background-color: $bg-color;
   padding: 250px 0 50px;
   display: flex;
   justify-content: center;
@@ -15,7 +27,7 @@
 .team-title {
   font-family: "Marcellus", serif;
   font-size: 42px;
-  color: #C49494;
+  color: $title-color;
   margin-bottom: 16px;
 }
 
@@ -23,7 +35,7 @@
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #4a4a4a;
+  color: $text-color;
   max-width: 720px;
   margin: 0 auto 64px;
 }

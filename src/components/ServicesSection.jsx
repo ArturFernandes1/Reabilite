@@ -10,34 +10,34 @@ import crises from "../assets/icons/icon_crises.png";
 
 const services = [
   {
-    title: "Ansiedade",
-    text: "Preocupações excessivas, insônia, taquicardia e sensação constante de alerta.",
-    image: ansiedade,
+    title: "Birras intensas",
+    text: "Crises frequentes de choro, irritação e dificuldade em lidar com frustrações no dia a dia.",
+    image: crises,
   },
   {
-    title: "Esgotamento emocional",
-    text: "Cansaço extremo, falta de motivação e vontade de se isolar das pessoas.",
+    title: "Dificuldade na escola",
+    text: "Problemas para acompanhar as atividades, baixo rendimento ou resistência em ir à escola.",
     image: emocional,
   },
   {
-    title: "Desvalorização",
-    text: "Baixa autoestima, autocrítica intensa ou sensação de ser um peso para os outros.",
-    image: desvalorizacao,
-  },
-  {
-    title: "Solidão",
-    text: "Mesmo cercado de pessoas, sente que ninguém entende o que você está passando.",
-    image: solidao,
-  },
-  {
-    title: "Confusão mental",
-    text: "Dificuldade de concentração, pensamentos acelerados ou sensação de mente embaralhada.",
+    title: "Falta de atenção e agitação",
+    text: "Dificuldade de concentração, inquietação constante e impulsividade em casa ou na escola.",
     image: confusao,
   },
   {
-    title: "Crises emocionais",
-    text: "Explosões de choro, irritabilidade, perda de controle ou sensação de desespero.",
-    image: crises,
+    title: "Atraso no desenvolvimento",
+    text: "Demora para falar, aprender ou desenvolver habilidades esperadas para a idade.",
+    image: desvalorizacao,
+  },
+  {
+    title: "Ansiedade infantil",
+    text: "Medos excessivos, preocupação constante, dificuldade para dormir ou se separar dos pais.",
+    image: ansiedade,
+  },
+  {
+    title: "Dificuldade de socialização",
+    text: "Desafios para se comunicar, interagir com outras crianças ou fazer amizades.",
+    image: solidao,
   },
 ];
 
@@ -67,12 +67,13 @@ export default function ServicesSection() {
     <section className="services-section" id="servicos">
       <div className="services-container">
         <h2 className="services-title">
-          Talvez você esteja aqui porque está enfrentando…
+          Seu filho pode estar passando por alguma dessas situações
         </h2>
 
         <p className="services-description">
-          Com a mente e o coração sobrecarregados, o psiquiatra é o profissional
-          capacitado a guiar você de volta ao bem-estar.
+          Cada criança se desenvolve de forma única. Identificar os sinais
+          precocemente é fundamental para oferecer o apoio certo no momento
+          certo.
         </p>
 
         <div className="services-grid">

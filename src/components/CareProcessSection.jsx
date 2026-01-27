@@ -10,16 +10,8 @@ export default function CareProcessSection() {
           Como funciona o acompanhamento psiquiátrico?
         </h2>
 
-        <p className="care-subtitle">
-          ✨ Avaliação médica, diagnóstico preciso e tratamento individualizado
-        </p>
-
         <p className="care-text">
-          Cada consulta é um momento reservado para entender sua história,
-          sintomas e contexto de vida. A partir disso, realizamos uma avaliação
-          clínica cuidadosa para traçar um plano terapêutico que pode incluir
-          orientações, mudanças de hábitos e, se necessário, o uso responsável
-          de medicação.
+          Cada atendimento na Reabilite é um momento de escuta e cuidado, pensado para compreender a criança, sua história, suas necessidades e o contexto familiar. A partir dessa avaliação criteriosa, nossa equipe traça um plano de intervenção individualizado, que pode incluir orientações à família, estratégias terapêuticas e acompanhamentos específicos para promover o desenvolvimento e o bem-estar da criança.
         </p>
 
         <h3 className="care-highlight">Atendimentos disponíveis</h3>
@@ -27,7 +19,7 @@ export default function CareProcessSection() {
         <div className="care-cards">
 
           <div className="care-card presencial">
-            <h4>Presencial em Brejo do Cruz (PB)</h4>
+            <h4>Presencial - Brejo do Cruz, PB</h4>
             <p>
               As consultas são realizadas em um ambiente discreto e acolhedor,
               ideal para quem busca uma escuta atenta aliada ao acompanhamento

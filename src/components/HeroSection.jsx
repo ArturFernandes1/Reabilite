@@ -12,23 +12,15 @@ export default function HeroSection() {
         </div>
 
         <div className="text-container">
-          <h2>Cuidado integral para o seu desenvolvimento!</h2>
+          <h2>Seu filho está enfrentando dificuldades no desenvolvimento, comportamento ou aprendizagem?</h2>
 
           <p>
-            Na REABILITE, oferecemos atendimento multidisciplinar personalizado
-            para cada paciente. Nossa equipe especializada em Psicologia,
-            Fonoaudiologia, Psicopedagogia e Neuropsicopedagogia trabalha com
-            técnicas modernas para promover o bem-estar e o desenvolvimento
-            integral.
+            No Espaço Multidisciplinar Reabilite, ajudamos crianças a desenvolverem todo o seu potencial por meio de um acompanhamento especializado, acolhedor e humanizado, com atendimento multidisciplinar pensado para cada necessidade.
           </p>
 
           <div className="buttons-container">
             <button className="btn-primary">
-              Quero atendimento presencial
-            </button>
-
-            <button className="btn-secondary">
-              Quero atendimento online
+              Agendar avaliação
             </button>
           </div>
         </div>

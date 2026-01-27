@@ -5,6 +5,9 @@
   justify-content: center;
 }
 
+/* =========================
+   WRAPPER
+========================= */
 .care-wrapper {
   background-color: #ffffff;
   max-width: 1000px;
@@ -20,6 +23,9 @@
   z-index: 2;
 }
 
+/* =========================
+   TEXTOS
+========================= */
 .care-title {
   font-family: "Marcellus", serif;
   font-size: 38px;
@@ -53,6 +59,9 @@
   font-family: "Marcellus", serif;
 }
 
+/* =========================
+   CARDS
+========================= */
 .care-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -63,8 +72,11 @@
 .care-card {
   padding: 32px;
   border-radius: 16px;
-  color: #ffffff;
-  text-align: left;
+  background-color: #ffffff;
+  color: #414141;
+  text-align: left; // desktop continua alinhado à esquerda
+  border: 1px solid #E0B1A9;
+  box-shadow: 1px 6px 2px #E0B1A9;
 
   h4 {
     font-size: 20px;
@@ -77,20 +89,13 @@
     font-size: 16px;
     line-height: 1.6;
     font-weight: 500;
-    font-family: "Marcellus", serif;
+    font-family: "Quicksand", sans-serif;
   }
 }
 
-.care-card.presencial {
-  background-color: #c49494;
-  color: #f3f1f1;
-}
-
-.care-card.online {
-  background-color: #c49494;
-  color: #f3f1f1;
-}
-
+/* =========================
+   BOTÃO
+========================= */
 .care-button {
   display: inline-block;
   background-color: #E0B1A9;
@@ -107,6 +112,10 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 }
+
+/* =========================
+   RESPONSIVO
+========================= */
 @media (max-width: 768px) {
   .care-section {
     padding: 0 0 80px;
@@ -117,15 +126,24 @@
     max-width: 100%;
     border-radius: 34px;
     padding: 48px 20px;
+
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+  }
+
+  .care-title {
+    font-size: 32px;
   }
 
   .care-cards {
     grid-template-columns: 1fr;
   }
 
-  .care-title {
-    font-size: 34px;
+  .care-card {
+    text-align: left; // mantém o texto legível
+
+    h4 {
+      text-align: center; // ✅ TÍTULO CENTRALIZADO NO MOBILE
+    }
   }
 }

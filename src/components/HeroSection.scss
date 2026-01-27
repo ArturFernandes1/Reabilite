@@ -1,39 +1,31 @@
 .text-image-section {
   display: flex;
   justify-content: center;
-  padding: 9rem 3rem 0;
+  padding: 9rem 3rem 5rem;
   position: relative;
   overflow: hidden;
-
-  background: linear-gradient(
-    155deg,
-    #C9C5A3 0%,
-    #CAC5A3 35%,
-    #D4D2B6 80%,
-    #DEDAC4 100%
-  );
+  background-color: #fff;
 
   .control-space-presentation {
     display: flex;
-    align-items: stretch;
+    align-items: center; // ✅ ALINHAMENTO PRINCIPAL
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    gap: 3rem;
+    gap: 4rem;
     position: relative;
     z-index: 2;
 
     .text-container {
       flex: 1;
-      max-width: 600px;
-      padding-bottom: 3rem;
+      max-width: 700px;
 
       h2 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         margin-bottom: 1rem;
         color: #0f1a2d;
         font-weight: 400;
-        font-family: 'Marcellus', serif;
+        font-family: "Marcellus", serif;
       }
 
       p {
@@ -41,7 +33,7 @@
         line-height: 1.7;
         margin-bottom: 1.8rem;
         color: #333;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
       }
 
       .buttons-container {
@@ -54,7 +46,7 @@
         padding: 0.9rem 1.6rem;
         border-radius: 8px;
         cursor: pointer;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
         white-space: nowrap;
         transition: all 0.3s;
       }
@@ -75,40 +67,47 @@
         border: 1.5px solid #646464;
 
         &:hover {
-          background-color:#E0B1A9;
-           border: 1.5px solid #fff;
+          background-color: #E0B1A9;
+          border-color: #fff;
           color: #fff;
         }
       }
     }
 
     .image-container {
+      flex: 1;
       display: flex;
-      align-items: flex-end;
       justify-content: center;
+      align-items: center; // ✅ ALINHAMENTO CORRETO
 
       img {
         width: 100%;
-        max-width: 550px;
+        max-width: 580px;
         height: auto;
         display: block;
-        margin-bottom: 0;
+
+        border-top-right-radius: 90px;
+        border-bottom-left-radius: 90px;
+        box-shadow: 10px 10px 8px 14px #E0B1A9;
       }
     }
   }
 }
 
-
+/* =========================
+   RESPONSIVO
+========================= */
 @media (max-width: 992px) {
   .text-image-section {
-    padding: 2rem 1.5rem 0;
+    padding: 3rem 1.5rem 2rem;
 
     .control-space-presentation {
       flex-direction: column;
+      gap: 2.5rem;
 
       .text-container {
         max-width: 100%;
-        padding-bottom: 2rem;
+        text-align: center;
 
         h2 {
           font-size: 1.8rem;
@@ -121,20 +120,15 @@
 
         .buttons-container {
           flex-direction: column;
-          width: 100%;
         }
 
         .btn-primary,
         .btn-secondary {
           width: 100%;
-          text-align: center;
         }
       }
 
       .image-container {
-        align-items: flex-end;
-        margin-top: 1.5rem;
-
         img {
           max-width: 100%;
         }

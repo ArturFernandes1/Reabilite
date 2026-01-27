@@ -1,3 +1,15 @@
+@use "sass:color";
+
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
+$bg-color: #ecbcb4;
+$title-color: #fff;
+$text-color: #fff;
+$button-bg: #7E9F6D;
+$button-hover: #6F8F60;
+$white: #ffffff;
+
 .section-footer {
 /*   background: linear-gradient(
     to right,
@@ -5,7 +17,7 @@
     #103824,
     #0d2d1c
   ); */
-  background-color: #C39291;
+  background-color: $bg-color;
   color: #fff;
   padding-top: 3rem;
 }
