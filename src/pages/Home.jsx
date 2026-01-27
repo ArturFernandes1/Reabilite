@@ -7,6 +7,7 @@ import TeamSection from "../components/TeamSection";
 import ServicesSection from "../components/ServicesSection";
 import AboutMy from "../components/AboutMy";
 import ProcessSection from "../components/CareProcessSection";
+import ComponentLocation from "../components/component-location/ComponentLocation";
 import SectionFooter from "../components/SectionFooter";
 
 
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutMy/>
       <ProcessSection/>
       <TeamSection/>
+      <ComponentLocation/>
       <SectionFooter />
     </>
   );
