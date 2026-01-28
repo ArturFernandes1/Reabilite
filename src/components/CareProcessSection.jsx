@@ -1,5 +1,6 @@
 import React from "react";
 import "./CareProcessSection.scss";
+import whatsapp from "../assets/icons/icon_whatsapp.png";
 
 export default function CareProcessSection() {
   return (
@@ -44,6 +45,7 @@ export default function CareProcessSection() {
           rel="noopener noreferrer"
           className="care-button"
         >
+          <img src={whatsapp} alt="WhatsApp" className="care-button__whatsapp-icon" />
           Agendar minha consulta agora
         </a>
 

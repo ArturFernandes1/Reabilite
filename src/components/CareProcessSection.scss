@@ -97,7 +97,9 @@
    BOTÃO
 ========================= */
 .care-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background-color: #E0B1A9;
   color: #ffffff;
   font-weight: 600;
@@ -111,6 +113,13 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
+}
+
+.care-button__whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 /* =========================

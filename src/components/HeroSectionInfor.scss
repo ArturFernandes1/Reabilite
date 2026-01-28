@@ -123,11 +123,12 @@ $white: #ffffff;
   width: fit-content;
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease;
 
   &:hover {
     background-color: $button-hover;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -135,6 +136,7 @@ $white: #ffffff;
   width: 22px;
   height: 22px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 /* =========================

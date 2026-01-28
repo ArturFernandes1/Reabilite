@@ -9,7 +9,7 @@ export default function CustomNavigation() {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
 
-        <a className="navbar-brand" href="#home">
+        <a className="navbar-brand" href="#inicio">
           <img src={logo} alt="Logo" className="logo" />
         </a>
 
@@ -32,19 +32,19 @@ export default function CustomNavigation() {
           <ul className="navbar-nav">
 
             <li className="nav-item">
-              <a className="nav-link" href="#home" onClick={() => setMenuOpen(false)}>
-                Home
+              <a className="nav-link" href="#inicio" onClick={() => setMenuOpen(false)}>
+                Início
               </a>
             </li>
 
             <li className="nav-item">
               <a className="nav-link" href="#sobre" onClick={() => setMenuOpen(false)}>
-                Sobre Nós
+                Sobre nós
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#areas" onClick={() => setMenuOpen(false)}>
+              <a className="nav-link" href="#areas-atuacao" onClick={() => setMenuOpen(false)}>
                 Áreas de Atuação
               </a>
             </li>

@@ -1,0 +1,64 @@
+.areas-container {
+  background-color: #fffaf5;
+
+  .areas-container-controll {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+
+  }
+
+  h2 {
+    font-family: "Marcellus", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #b07a4a;
+    margin-bottom: 3rem;
+  }
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.area-card {
+  background-color: #ffffff;
+  border: 4px dashed #c9a27d;
+  border-radius: 14px;
+  padding: 1rem 1.4rem;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  h3 {
+    font-family: "Marcellus", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #b07a4a;
+  }
+
+  p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #5a4634;
+  }
+
+  &:nth-child(even) {
+    border-color: #3E2507;
+
+    h3,
+    p {
+      color: #3E2507;
+    }
+  }
+}

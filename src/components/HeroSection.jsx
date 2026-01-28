@@ -1,11 +1,11 @@
 import React from 'react';
 import './HeroSection.scss';
 
-import persona1 from '../assets/back_teste2.png';
+import persona1 from '../assets/imgbackground2.png';
 
 export default function HeroSection() {
   return (
-    <section className="text-image-section">
+    <section className="text-image-section" id="inicio">
       <div className="control-space-presentation">
         <div className="image-container">
           <img src={persona1} alt="Descrição da imagem" />

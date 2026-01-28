@@ -6,7 +6,7 @@ import "./ComponentLocation.scss";
 
 export default function ComponentLocation() {
   return (
-    <section className="component-location">
+    <section className="component-location" id="contato">
       <div className="container-location">
         <div className="map-side">
           <ContactInfo />

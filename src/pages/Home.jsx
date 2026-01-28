@@ -9,7 +9,7 @@ import AboutMy from "../components/AboutMy";
 import ProcessSection from "../components/CareProcessSection";
 import ComponentLocation from "../components/component-location/ComponentLocation";
 import SectionFooter from "../components/SectionFooter";
-
+import AreasAtuacao from "../components/AreasAtuacao";
 
 
 {/*  <TeamSection/> */}
@@ -23,6 +23,7 @@ export default function Home() {
       <AboutMy/>
       <ProcessSection/>
       <TeamSection/>
+      <AreasAtuacao/>
       <ComponentLocation/>
       <SectionFooter />
     </>

@@ -3,9 +3,13 @@ import './SectionFooter.scss';
 import logo from '../assets/logo_copia1.png';
 import seta from '../assets/icons/icon_seta.png';
 import localiza from '../assets/icons/icon_localizacolor.png';
+import localiza1 from '../assets/icons/icon_localiza.png';
 import telefone from '../assets/icons/icon_telefone.png';
 import insta from '../assets/icons/icon_insta.png';
+import facebook from '../assets/icons/icon_facebook.png';
+import tiktok from '../assets/icons/icon_tiktok.png';
 import whats from '../assets/icons/icon_whatsappcolor.png';
+import whats1 from '../assets/icons/icon_whatsapp.png';
 import relogio from '../assets/icons/icon_relogio.png';
 
 export default function SectionFooter() {
@@ -54,7 +58,7 @@ export default function SectionFooter() {
           <h4>Contato</h4>
           <ul className="footer-contact">
             <li>
-              <img src={localiza} alt="" />
+              <img src={localiza1} alt="" />
               <span>
                 Galeria Nova Vitória, ao lado do Bradesco, <br />
                 Brejo do Cruz - PB
@@ -67,7 +71,7 @@ export default function SectionFooter() {
             </li>
 
             <li>
-              <img src={whats} alt="" />
+              <img src={whats1} alt="" />
               <span>WhatsApp: (83) 9XXXX-XXXX</span>
             </li>
 
@@ -85,6 +89,14 @@ export default function SectionFooter() {
             <li>
               <img src={insta} alt="" />
               <span>@reabilite.multidisciplinar</span>
+            </li>
+            <li>
+              <img src={facebook} alt="" />
+              <span>Reabilite_BC</span>
+            </li>
+            <li>
+              <img src={tiktok} alt="" />
+              <span>@reabilite.brejo</span>
             </li>
           </ul>
         </div>
