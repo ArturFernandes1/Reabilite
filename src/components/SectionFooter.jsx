@@ -2,10 +2,10 @@ import React from 'react';
 import './SectionFooter.scss';
 import logo from '../assets/logo_copia1.png';
 import seta from '../assets/icons/icon_seta.png';
-import localiza from '../assets/icons/icon_localiza.png';
+import localiza from '../assets/icons/icon_localizacolor.png';
 import telefone from '../assets/icons/icon_telefone.png';
 import insta from '../assets/icons/icon_insta.png';
-import whats from '../assets/icons/icon_whatsapp.png';
+import whats from '../assets/icons/icon_whatsappcolor.png';
 import relogio from '../assets/icons/icon_relogio.png';
 
 export default function SectionFooter() {

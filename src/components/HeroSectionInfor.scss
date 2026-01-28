@@ -3,11 +3,11 @@
 /* =========================
    VARIÁVEIS DE COR
 ========================= */
-$bg-color: #ecbcb4;
-$title-color: #fff;
-$text-color: #fff;
-$button-bg: #7E9F6D;
-$button-hover: #6F8F60;
+$bg-color: #F8F0E5;
+$title-color: #6b5b52;
+$text-color: #6b5b52;
+$button-bg: #E0B1A9;
+$button-hover: #ca9f97;
 $white: #ffffff;
 
 /* =========================
@@ -47,7 +47,7 @@ $white: #ffffff;
   font-weight: 100;
   line-height: 1.15;
   letter-spacing: -0.5px;
-  color: $title-color;
+  color: #B28355;
   margin: 0;
 }
 
@@ -162,7 +162,11 @@ $white: #ffffff;
     align-items: center;
   }
 
-  .hero-left,
+  .hero-left {
+    width: 100%;
+    text-align: left;
+  }
+
   .hero-right {
     width: 100%;
     text-align: center;
@@ -179,10 +183,10 @@ $white: #ffffff;
   }
 
   .hero-services {
-    align-items: center;
+    align-items: flex-start;
 
     li {
-      justify-content: center;
+      justify-content: flex-start;
       font-size: 15px;
     }
   }
@@ -198,7 +202,7 @@ $white: #ffffff;
   }
 
   .hero-description {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .hero-button {

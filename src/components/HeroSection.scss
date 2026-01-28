@@ -1,29 +1,30 @@
 .text-image-section {
   display: flex;
   justify-content: center;
-  padding: 9rem 3rem 5rem;
+  padding: 4rem 3rem 1rem;
   position: relative;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #EAD9C4;
 
   .control-space-presentation {
     display: flex;
-    align-items: center; // ✅ ALINHAMENTO PRINCIPAL
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     gap: 4rem;
     position: relative;
     z-index: 2;
 
     .text-container {
       flex: 1;
-      max-width: 700px;
+      max-width: 600px;
+      text-align: left;
 
       h2 {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
-        color: #0f1a2d;
+        color: #c39090;
         font-weight: 400;
         font-family: "Marcellus", serif;
       }
@@ -39,6 +40,7 @@
       .buttons-container {
         display: flex;
         gap: 1rem;
+        justify-content: flex-start;
       }
 
       .btn-primary,
@@ -78,25 +80,18 @@
       flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center; // ✅ ALINHAMENTO CORRETO
+      align-items: flex-end;
 
       img {
         width: 100%;
-        max-width: 580px;
-        height: auto;
-        display: block;
-
-        border-top-right-radius: 90px;
-        border-bottom-left-radius: 90px;
-        box-shadow: 10px 10px 8px 14px #E0B1A9;
+        max-width: 700px;
+        height: 700px;
+        object-fit: cover;
+        object-position: bottom;
       }
     }
   }
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
+} 
 @media (max-width: 992px) {
   .text-image-section {
     padding: 3rem 1.5rem 2rem;

@@ -1,0 +1,151 @@
+$golden-brown: #a37e57;
+$golden-brown-light: #b8926e;
+$text-brown: #5c4a3d;
+$text-brown-light: #7d6b5c;
+
+.contact-info {
+  padding: 1.5rem 0;
+  text-align: left;
+
+  
+
+  &__title {
+    font-family: 'Marcellus', serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #e0b1a9;
+    margin-bottom: 0.5rem;
+
+    &-mobile {
+      display: none;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: $text-brown-light;
+    margin-bottom: 1.75rem;
+  }
+
+  &__sparkle-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    strong {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #e0b1a9;
+    }
+
+    span {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: $text-brown-light;
+      font-weight: 400;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e0b1a9;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+      background-color: #ca9f97;
+    }
+  }
+}
+
+/* Mobile: título "Contato" centralizado */
+@media (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+
+    &__title {
+      text-align: center;
+
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: inline;
+      }
+    }
+
+    &__intro {
+      justify-content: center;
+    }
+
+    &__list {
+      text-align: left;
+    }
+
+    &__item {
+      div {
+        text-align: left;
+      }
+    }
+
+    &__social {
+      justify-content: center;
+    }
+  }
+}

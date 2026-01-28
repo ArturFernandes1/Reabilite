@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroSection.scss';
 
-import persona1 from '../assets/backgroundchat1.png';
+import persona1 from '../assets/back_teste2.png';
 
 export default function HeroSection() {
   return (

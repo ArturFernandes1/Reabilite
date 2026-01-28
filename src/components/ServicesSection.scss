@@ -33,7 +33,8 @@
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.3em;
+    gap: 1.5rem;
+    align-items: stretch;
   }
 
   /* =========================
@@ -41,8 +42,8 @@
   ========================== */
   .service-card {
     background-color: #ffffff;
-    padding: 1rem;
-    border: 1px solid #E0B1A9;
+    padding: 1rem 1.25rem 1rem;
+    border: 1px solid #EAD9C4;
     border-radius: 12px;
 
     display: flex;
@@ -50,7 +51,7 @@
     align-items: center;
     text-align: center;
 
-    box-shadow: 1px 6px 2px #E0B1A9;
+    box-shadow: 1px 6px 2px #EAD9C4;
 
     /* Animação */
     opacity: 0;
@@ -59,26 +60,28 @@
       transform 0.7s ease;
     transition-delay: calc(var(--i) * 0.3s);
 
-    &:hover,
-    &:focus {
-      border-right: 4px solid #E0B1A9;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 2px 0 #E0B1A9;
-    }
-
     .service-icon {
-      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      width: 100%;
+      min-height: 60px;
+      flex-shrink: 0;
 
       img {
-        width: 100px;
+        width: 90px;
+        max-width: 100%;
         height: auto;
+        display: block;
+        object-fit: contain;
       }
     }
 
     h3 {
       font-size: 1.6rem;
       color: #000;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       font-weight: 500;
       font-family: 'Marcellus', serif;
     }
@@ -87,6 +90,7 @@
       font-size: 1rem;
       color: #000;
       line-height: 1.5;
+      margin-bottom: 0;
       font-family: 'Quicksand', sans-serif;
     }
   }
@@ -142,18 +146,15 @@
     }
 
     .service-card {
-      padding: 1rem;
-      box-shadow: 1px 4px 2px #E0B1A9;
+      padding: 0.875rem 1rem 0.875rem;
+      box-shadow: 1px 4px 2px #EAD9C4;
 
-      &:hover,
-      &:focus {
-      border-right: 4px solid #E0B1A9;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 2px 0 #E0B1A9;
-    }
+      .service-icon {
+        margin-bottom: 0.6rem;
+      }
 
       .service-icon img {
-        width: 90px;
+        width: 48px;
       }
     }
   }

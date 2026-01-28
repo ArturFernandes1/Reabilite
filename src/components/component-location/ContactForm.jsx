@@ -24,8 +24,7 @@ export default function ContactForm() {
 
   return (
     <section className="contact-form-section">
-      <h2>Fale Conosco</h2>
-      <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+      <p>Preencha o formulário abaixo e em breve entrarei em contato com você para agendarmos sua sessão.</p>
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -34,7 +33,7 @@ export default function ContactForm() {
             type="text"
             id="name"
             name="name"
-            placeholder="Digite seu nome"
+            placeholder="Nome completo"
             value={formData.name}
             onChange={handleChange}
             required
@@ -44,10 +43,10 @@ export default function ContactForm() {
         <div className="form-group">
           {/* <label htmlFor="email">E-mail</label> */}
           <input
-            type="telefone"
+            type="tel"
             id="telefone"
             name="telefone"
-            placeholder="Digite seu telefone"
+            placeholder="Telefone com WhatsApp"
             value={formData.telefone}
             onChange={handleChange}
             required
@@ -59,7 +58,7 @@ export default function ContactForm() {
           <textarea
             id="message"
             name="message"
-            placeholder="Digite sua mensagem"
+            placeholder="Como posso te ajudar?"
             rows="5"
             value={formData.message}
             onChange={handleChange}
@@ -67,7 +66,7 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
-        <button type="submit" className="submit-btn">Enviar Mensagem</button>
+        <button type="submit" className="submit-btn">Enviar</button>
       </form>
     </section>
   );
