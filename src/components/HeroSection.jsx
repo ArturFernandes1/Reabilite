@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroSection.scss';
 
-import reabilite from '../assets/Reabilite2.png';
+import reabilite from '../assets/reabilitebg.png';
 import reabiliteMobile from '../assets/reabilitemobile.png';
 
 export default function HeroSection() {
