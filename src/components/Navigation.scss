@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background-color: #ead9c4;
+  background-color: #E6A599;
   font-family: 'Quicksand', sans-serif;
   min-height: 50px;
 }
@@ -84,7 +84,7 @@
       font-size: 1.1rem;
       font-weight: 500;
       text-transform: uppercase;
-      color: #3a3a3a;
+      color: #fff;
       cursor: pointer;
       transition: color 0.3s ease;
 
@@ -95,7 +95,7 @@
         bottom: -4px;
         width: 0%;
         height: 2px;
-        background-color: #3a3a3a;
+        background-color: #fff;
         transition: width 0.3s ease, left 0.3s ease;
       }
 
@@ -110,8 +110,8 @@
 
 .btn-primary {
   padding: 0.5rem 1.2rem;
-  background-color: #E0B1A9;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-weight: 500;
   border-radius: 28px;
   border: none;
@@ -120,10 +120,10 @@
   box-shadow: none;
 
   &:hover {
-    background-color: #ca9f97;
-    color: #fff;
+    background-color: #f0f0f0;
+    color: #000;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   &:focus,

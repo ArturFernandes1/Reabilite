@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroSectionInfor.scss";
 import whatsapp from "../assets/icons/icon_whatsapp.png";
-import seta from "../assets/icons/icon_seta.png";
+import seta from "../assets/icons/icon_setablack.png";
 
 const HeroSectionInfor = () => {
   const handleWhatsApp = () => {

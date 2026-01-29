@@ -1,29 +1,17 @@
 import React from 'react';
 import './HeroSection.scss';
 
-import persona1 from '../assets/imgbackground2.png';
+import reabilite from '../assets/Reabilite2.png';
+import reabiliteMobile from '../assets/reabilitemobile.png';
 
 export default function HeroSection() {
   return (
-    <section className="text-image-section" id="inicio">
-      <div className="control-space-presentation">
-        <div className="image-container">
-          <img src={persona1} alt="Descrição da imagem" />
-        </div>
-
-        <div className="text-container">
-          <h2>Seu filho está enfrentando dificuldades no desenvolvimento, comportamento ou aprendizagem?</h2>
-
-          <p>
-            No Espaço Multidisciplinar Reabilite, ajudamos crianças a desenvolverem todo o seu potencial por meio de um acompanhamento especializado, acolhedor e humanizado, com atendimento multidisciplinar pensado para cada necessidade.
-          </p>
-
-          <div className="buttons-container">
-            <button className="btn-primary">
-              Agendar avaliação
-            </button>
-          </div>
-        </div>
+    <section className="hero-section" id="inicio">
+      <div className="hero-image-container">
+        <picture>
+          <source media="(max-width: 768px)" srcSet={reabiliteMobile} />
+          <img src={reabilite} alt="Reabilite - Espaço Multidisciplinar" />
+        </picture>
       </div>
     </section>
   );

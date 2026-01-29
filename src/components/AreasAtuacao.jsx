@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./AreasAtuacao.scss";
 
 const areas = [
@@ -25,20 +25,48 @@ const areas = [
 ];
 
 export default function AreasAtuacao() {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="areas-container" id="areas-atuacao">
-        <div className="areas-container-controll">
-            <h2>Áreas de Atuação</h2>
+      <div className="areas-container-controll">
+        <h2>Áreas de Atuação</h2>
 
-            <div className="areas-grid">
-                {areas.map((area, index) => (
-                    <div className="area-card" key={index}>
-                        <h3>{area.titulo}</h3>
-                        <p>{area.descricao}</p>
-                    </div>
-                ))}
+        <div className="areas-grid">
+          {areas.map((area, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              style={{ "--i": index }}
+              className={`area-card ${
+                Math.floor(index / 2) % 2 === 0 ? "from-left" : "from-right"
+              }`}
+            >
+              <h3>{area.titulo}</h3>
+              <p>{area.descricao}</p>
             </div>
+          ))}
         </div>
+      </div>
     </section>
   );
 }
