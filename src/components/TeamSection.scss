@@ -1,15 +1,18 @@
 @use "sass:color";
 
 /* =========================
-   VARIÁVEIS DE COR
+   VARIÁVEIS
 ========================= */
 $bg-color: #F8F0E5;
 $title-color: #6b5b52;
 $text-color: #6b5b52;
-$button-bg: #7E9F6D;
-$button-hover: #6F8F60;
 $white: #ffffff;
+$green-dark: #0f3d2e;
+$green-light: #5e6f2b;
 
+/* =========================
+   SECTION
+========================= */
 .team-section {
   background-color: $bg-color;
   padding: 250px 0 50px;
@@ -23,78 +26,199 @@ $white: #ffffff;
   text-align: center;
 }
 
-/* Títulos */
+/* =========================
+   TÍTULOS
+========================= */
 .team-title {
   font-family: "Marcellus", serif;
   font-size: 42px;
-  color: $title-color;
+  color: #000;
   margin-bottom: 16px;
 }
 
 .team-subtitle {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  color: $text-color;
+  color: #000;
   max-width: 720px;
   margin: 0 auto 64px;
 }
 
-/* GRID HORIZONTAL */
+/* =========================
+   GRID
+========================= */
 .team-grid {
   display: flex;
+  align-items: flex-start;
   gap: 24px;
   overflow-x: auto;
   padding: 20px 10px 40px;
   scroll-snap-type: x mandatory;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .team-member {
-  flex: 0 0 340px; /* largura fixa para manter horizontal */
-  background-color: #f8f8f8;
-/*   border-radius: 24px; */
-/*   padding: 40px 32px; */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  flex: 0 0 340px;
+  background-color: $white;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
   scroll-snap-align: start;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
 
+  &.open {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 
-
-  img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 25px;
-
-/*     margin-bottom: 24px; */
-  }
-
-  h3 {
-    font-family: "Marcellus", serif;
-    font-size: 22px;
-    color: #0f3d2e;
-    margin-bottom: 6px;
-  }
-
-  span {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #5e6f2b;
-    margin-bottom: 16px;
-  }
-
-  p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #444;
-    font-family: "Quicksand", sans-serif;
+    .card-extra {
+      max-height: 400px;
+      padding: 16px 20px 24px;
+      opacity: 1;
+      overflow-y: auto;
+    }
   }
 }
 
-/* Scrollbar custom (opcional, mas recomendado) */
+/* =========================
+   IMAGEM
+========================= */
+.image-wrapper {
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.card-content {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  align-items: flex-start;
+  min-height: 115px;
+  box-sizing: border-box;
+  background-color: $white;
+}
+
+/* SETA */
+.arrow-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+  color: $green-light;
+  line-height: 1;
+  margin-top: 4px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #FBE3DF;
+  }
+
+  .arrow-btn-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+  }
+
+  .team-member.open & .arrow-btn-icon {
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    padding: 6px 10px;
+    background-color: #FBE3DF;
+    color: $title-color;
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* TEXTO */
+.text-content {
+  text-align: left;
+  
+  h3 {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-family: "Marcellus", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+/* =========================
+   CONTEÚDO EXPANDIDO
+========================= */
+.card-extra {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  text-align: left;
+  background-color: $white;
+
+  p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .card-extra-text {
+    p + p {
+      margin-top: 12px;
+    }
+  }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
 .team-grid::-webkit-scrollbar {
   height: 6px;
 }
@@ -104,18 +228,26 @@ $white: #ffffff;
   border-radius: 10px;
 }
 
-.team-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Responsivo */
+/* =========================
+   RESPONSIVO
+========================= */
 @media (max-width: 768px) {
-  .team-title {
-    font-size: 34px;
+  .team-grid {
+    padding-left: calc(50vw - 160px);
+    padding-right: calc(50vw - 160px);
   }
 
   .team-member {
-    flex: 0 0 280px;
-    padding: 32px 24px;
+    flex: 0 0 320px;
+    scroll-snap-align: center;
+  }
+
+  .image-wrapper {
+    height: 340px;
+
+    img {
+      height: 100%;
+      object-position: top;
+    }
   }
 }
