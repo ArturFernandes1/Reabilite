@@ -45,8 +45,12 @@ $green-light: #5e6f2b;
 }
 
 /* =========================
-   GRID
+   SLIDER + GRID
 ========================= */
+.team-slider {
+  position: relative;
+}
+
 .team-grid {
   display: flex;
   align-items: flex-start;
@@ -54,6 +58,40 @@ $green-light: #5e6f2b;
   overflow-x: auto;
   padding: 20px 10px 40px;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+/* Dots - desktop e mobile */
+.team-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0 8px;
+}
+
+.team-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  &.active {
+    background-color: #000;
+    transform: scale(1.2);
+  }
 }
 
 /* =========================
@@ -214,18 +252,6 @@ $green-light: #5e6f2b;
       margin-top: 12px;
     }
   }
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-.team-grid::-webkit-scrollbar {
-  height: 6px;
-}
-
-.team-grid::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
 }
 
 /* =========================

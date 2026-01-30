@@ -10,32 +10,26 @@ const AboutDanyella = () => {
 
         <div className="about-text-area">
           <h2 className="about-title">Quem é Danyella Ribeiro?</h2>
-
           <p className="about-intro">
-            Olá, sou Danyella Ribeiro. Dedico meu trabalho ao cuidado da saúde
-            emocional e ao desenvolvimento humano, auxiliando pessoas que
-            enfrentam desafios como ansiedade, sofrimento emocional, dificuldades
-            de relacionamento e momentos de sobrecarga.
+            Olá, sou Danyella Ribeiro, psicóloga e fundadora da Reabilite – Espaço
+            Multidisciplinar. Dedico meu trabalho ao cuidado da saúde emocional e ao
+            desenvolvimento infantil, com foco no acolhimento, na escuta qualificada e
+            no respeito à singularidade de cada criança e família.
           </p>
 
           <p className="about-text">
-            Minha abordagem é profundamente humanizada e centrada em cada pessoa.
-            Acredito que o cuidado começa pela escuta, pelo acolhimento e pelo
-            respeito à história e ao ritmo individual de cada paciente.
-          </p>
-
-          <p className="about-text">
-            Busco compreender não apenas os sintomas, mas também os fatores
-            emocionais, comportamentais e contextuais que impactam o bem-estar,
-            construindo caminhos terapêuticos personalizados.
+            Com especialização em ABA (Análise do Comportamento Aplicada) e intervenção
+            precoce, atuo no apoio ao desenvolvimento de crianças que enfrentam desafios
+            emocionais, comportamentais e dificuldades no processo de aprendizagem,
+            sempre por meio de uma abordagem humanizada e personalizada.
           </p>
 
           <p className="about-highlight">
-            Meu propósito é oferecer um espaço seguro, ético e acolhedor, onde
-            você possa se sentir compreendido(a) e apoiado(a).
+            Como fundadora da Reabilite, meu propósito é oferecer um espaço seguro,
+            ético e acolhedor, caminhando junto às famílias para promover autonomia,
+            bem-estar emocional e desenvolvimento saudável.
           </p>
         </div>
-
         <div className="about-image-area">
           <img src={imgBackground} alt="Danyella Ribeiro" />
         </div>

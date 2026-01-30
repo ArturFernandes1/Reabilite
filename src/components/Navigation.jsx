@@ -57,7 +57,7 @@ export default function CustomNavigation() {
 
             <li className="nav-item">
               <a
-                className="btn btn-primary ms-3"
+                className="btn btn-primary"
                 href="#fale-conosco"
                 onClick={() => setMenuOpen(false)}
               >

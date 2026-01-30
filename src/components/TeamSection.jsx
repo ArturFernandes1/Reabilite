@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import "./TeamSection.scss";
 
 import perfil from "../assets/perfilteste1.jpeg";
@@ -37,14 +37,73 @@ const teamMembers = [
       </>
     ),
   },
+  {
+    name: "Williane Joice",
+    title: "Especialista em Neuropsicopedagogia",
+    description: (
+      <>
+        <p>
+          É especialista em Neuropsicopedagogia e atua com foco no desenvolvimento
+          cognitivo e emocional, auxiliando crianças e adolescentes a superarem
+          desafios de aprendizagem.
+        </p>
+        <p>
+          Com uma abordagem integrativa e baseada em evidências científicas,
+          trabalha para potencializar o aprendizado e promover o bem-estar
+          dos seus pacientes.
+        </p>
+      </>
+    ),
+  },
 ];
 
 export default function TeamSection() {
   const [openIndex, setOpenIndex] = useState(null);
+  const [centeredIndex, setCenteredIndex] = useState(0);
+  const gridRef = useRef(null);
 
   const toggleCard = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
+
+  const updateCenteredIndex = useCallback(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const scrollLeft = grid.scrollLeft;
+    const center = scrollLeft + grid.clientWidth / 2;
+    const cards = grid.children;
+    let closest = 0;
+    let closestDist = Infinity;
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const dist = Math.abs(center - cardCenter);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    }
+    setCenteredIndex(closest);
+  }, []);
+
+  const scrollToCard = (index) => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const card = grid.children[index];
+    if (card) {
+      const scrollLeft = card.offsetLeft - grid.clientWidth / 2 + card.offsetWidth / 2;
+      grid.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    updateCenteredIndex();
+    const grid = gridRef.current;
+    if (!grid) return;
+    const ro = new ResizeObserver(updateCenteredIndex);
+    ro.observe(grid);
+    return () => ro.disconnect();
+  }, [updateCenteredIndex]);
 
   return (
     <section className="team-section">
@@ -55,8 +114,13 @@ export default function TeamSection() {
           Profissionais qualificados, com olhar humano e atendimento individualizado
         </p>
 
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
+        <div className="team-slider">
+          <div
+            className="team-grid"
+            ref={gridRef}
+            onScroll={updateCenteredIndex}
+          >
+            {teamMembers.map((member, index) => (
             <div
               key={index}
               className={`team-member ${openIndex === index ? "open" : ""}`}
@@ -95,7 +159,21 @@ export default function TeamSection() {
                 )}
               </div>
             </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="team-dots" aria-hidden="true">
+            {teamMembers.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`team-dot ${centeredIndex === index ? "active" : ""}`}
+                onClick={() => scrollToCard(index)}
+                aria-label={`Ir para card ${index + 1}`}
+                aria-current={centeredIndex === index ? "true" : undefined}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
