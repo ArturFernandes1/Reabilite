@@ -16,7 +16,7 @@
     font-family: "Marcellus", serif;
     font-size: 2.2rem;
     font-weight: 600;
-    color: #b07a4a;
+    color: #008288;
     margin-bottom: 3rem;
 
     @media (max-width: 768px) {
@@ -45,8 +45,9 @@
   text-align: left;
 
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 
   /* Animação: surgir dos lados */
   opacity: 0;
@@ -72,7 +73,42 @@
     border-width: 2px;
     border-radius: 10px;
     padding: 0.85rem 1rem;
-    gap: 0.25rem;
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .area-card-img {
+    flex-shrink: 0;
+    width: auto;
+    height: 100px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: auto;
+      overflow: visible;
+
+      img {
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .area-card-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   h3 {
@@ -104,6 +140,46 @@
     h3,
     p {
       color: #3E2507;
+    }
+  }
+
+  /* Estilo específico para o card de Psicologia (1º card) */
+  &:nth-child(1) {
+    border-color: #D92B79;
+
+    h3,
+    p {
+      color: #D92B79;
+    }
+  }
+
+  /* Estilo específico para o card de Fonoaudiologia (2º card) */
+  &:nth-child(2) {
+    border-color: #008288;
+
+    h3,
+    p {
+      color: #008288;
+    }
+  }
+
+  /* Estilo específico para o card de Psicopedagogia (3º card) */
+  &:nth-child(3) {
+    border-color: #CC4957;
+
+    h3,
+    p {
+      color: #CC4957;
+    }
+  }
+
+  /* Estilo específico para o card de Neuropsicopedagogia (4º card) */
+  &:nth-child(4) {
+    border-color: #4A9AD5;
+
+    h3,
+    p {
+      color: #4A9AD5;
     }
   }
 }

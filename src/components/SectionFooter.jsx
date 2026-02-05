@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SectionFooter.scss';
 import logo from '../assets/logo_copia1.png';
 import seta from '../assets/icons/icon_seta.png';
@@ -87,8 +88,10 @@ export default function SectionFooter() {
           <h4>Redes Sociais</h4>
           <ul className="footer-social">
             <li>
-              <img src={insta} alt="" />
-              <span>@reabilite.multidisciplinar</span>
+              <a href="https://www.instagram.com/espreabilite/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src={insta} alt="" />
+                <span>@espreabilite</span>
+              </a>
             </li>
             <li>
               <img src={facebook} alt="" />
@@ -108,7 +111,7 @@ export default function SectionFooter() {
         <p>
           © 2025 REABILITE – Espaço Multidisciplinar. Todos os direitos reservados.
         </p>
-        <a href="#">Política de Privacidade</a>
+        <Link to="/politica-privacidade">Política de Privacidade</Link>
       </div>
     </footer>
   );

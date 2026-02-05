@@ -53,7 +53,7 @@ export default function ContactInfo() {
       </ul>
 
       <div className="contact-info__social">
-        <a href="#" className="contact-info__social-link" aria-label="Instagram">
+        <a href="https://www.instagram.com/espreabilite/" target="_blank" rel="noopener noreferrer" className="contact-info__social-link" aria-label="Instagram">
           <img src={insta} alt="" />
         </a>
         <a href="#" className="contact-info__social-link" aria-label="Facebook">

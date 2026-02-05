@@ -1,26 +1,34 @@
 import React, { useEffect, useRef } from "react";
 import "./AreasAtuacao.scss";
+import cerebroImg from "../assets/cerebro.jpg";
+import fonoauImg from "../assets/fonoau.jpg";
+import psicopedagogiaImg from "../assets/Psicopedagogia.png";
+import quebraCabecaImg from "../assets/quebra_cabeca.avif";
 
 const areas = [
   {
     titulo: "Psicologia",
     descricao:
-      "Cuidado com a saúde emocional e mental, auxiliando no tratamento de ansiedade, depressão, estresse, traumas e no fortalecimento do autoconhecimento."
+      "Cuidado com a saúde emocional e mental, auxiliando no tratamento de ansiedade, depressão, estresse, traumas e no fortalecimento do autoconhecimento.",
+    img: cerebroImg
   },
   {
     titulo: "Fonoaudiologia",
     descricao:
-      "Atuação na comunicação humana, auxiliando em dificuldades de fala, linguagem, voz, audição, leitura, escrita e deglutição."
+      "Atuação na comunicação humana, auxiliando em dificuldades de fala, linguagem, voz, audição, leitura, escrita e deglutição.",
+    img: fonoauImg
   },
   {
     titulo: "Psicopedagogia",
     descricao:
-      "Foco nos processos de aprendizagem, identificando e intervindo em dificuldades escolares, cognitivas e emocionais."
+      "Foco nos processos de aprendizagem, identificando e intervindo em dificuldades escolares, cognitivas e emocionais.",
+    img: psicopedagogiaImg
   },
   {
     titulo: "Neuropsicopedagogia",
     descricao:
-      "Integra neurociência, psicologia e pedagogia para compreender o funcionamento cerebral no processo de aprendizagem."
+      "Integra neurociência, psicologia e pedagogia para compreender o funcionamento cerebral no processo de aprendizagem.",
+    img: quebraCabecaImg
   }
 ];
 
@@ -61,8 +69,15 @@ export default function AreasAtuacao() {
                 Math.floor(index / 2) % 2 === 0 ? "from-left" : "from-right"
               }`}
             >
-              <h3>{area.titulo}</h3>
-              <p>{area.descricao}</p>
+              {area.img && (
+                <div className="area-card-img">
+                  <img src={area.img} alt={area.titulo} />
+                </div>
+              )}
+              <div className="area-card-content">
+                <h3>{area.titulo}</h3>
+                <p>{area.descricao}</p>
+              </div>
             </div>
           ))}
         </div>
