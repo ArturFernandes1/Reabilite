@@ -1,11 +1,16 @@
 .hero-section {
   position: relative;
-  overflow: hidden;
-  background-color: #FEF4F3;
+  overflow: visible;
+  background-color: #C9C4A2;
   width: 100%;
+
+  @media (max-width: 768px) {
+    min-height: 75vh;
+  }
 }
 
 .hero-image-container {
+  position: relative;
   width: 100%;
 
   img {
@@ -18,12 +23,83 @@
 
   @media (max-width: 768px) {
     width: 100%;
+    min-height: 70vh;
+    padding-bottom: 10rem;
+
+    picture {
+      display: block;
+    }
 
     img {
       width: 100%;
-      max-height: 95vh;
-      min-height: 70vh;
+      height: auto;
+      max-height: none;
+      display: block;
       object-fit: contain;
+      object-position: top center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 30%, rgba(201, 196, 162, 0.6) 60%, #C9C4A2 100%);
+      pointer-events: none;
+    }
+
+    .hero-mobile-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      text-align: left;
+      position: absolute;
+      top: 58%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 1.25rem 1rem 2rem;
+      box-sizing: border-box;
+      background: transparent;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-family: 'Marcellus', serif;
+      font-size: clamp(1.6rem, 7vw, 2.1rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: #A67B5B;
+      margin: 0 0 1rem;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      align-self: stretch;
+
+      .hero-title-highlight {
+        color: #5C4033;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 4vw, 1.15rem);
+      font-weight: 400;
+      line-height: 1.55;
+      color: #3D2C29;
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hero-mobile-text {
+      display: none;
     }
   }
 }
