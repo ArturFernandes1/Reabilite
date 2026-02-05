@@ -260,3 +260,9 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #C9C4A2;
+  }
+}
