@@ -8,7 +8,7 @@ export default function CareProcessSection() {
       <div className="care-wrapper">
 
         <h2 className="care-title">
-          Como funciona o acompanhamento psiquiátrico?
+          Como funciona o acompanhamento Psicoterapêutico?
         </h2>
 
         <p className="care-text">

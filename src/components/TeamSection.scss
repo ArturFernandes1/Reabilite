@@ -41,8 +41,10 @@ $green-light: #5e6f2b;
   font-size: 18px;
   color: #000;
   max-width: 720px;
-  margin: 0 auto 64px;
+  margin: 0 auto 56px; // levemente menor que 64px
+  line-height: 1.5;
 }
+
 
 /* =========================
    SLIDER + GRID
@@ -261,6 +263,13 @@ $green-light: #5e6f2b;
   .team-grid {
     padding-left: calc(50vw - 160px);
     padding-right: calc(50vw - 160px);
+  }
+ .team-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px auto 40px;
+    padding: 0 16px; 
+    text-align: center;
   }
 
   .team-member {

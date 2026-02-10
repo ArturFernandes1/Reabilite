@@ -5,9 +5,6 @@
   justify-content: center;
 }
 
-/* =========================
-   WRAPPER
-========================= */
 .care-wrapper {
   background-color: #ffffff;
   max-width: 1000px;
@@ -23,9 +20,6 @@
   z-index: 2;
 }
 
-/* =========================
-   TEXTOS
-========================= */
 .care-title {
   font-family: "Marcellus", serif;
   font-size: 38px;
@@ -59,9 +53,6 @@
   font-family: "Marcellus", serif;
 }
 
-/* =========================
-   CARDS
-========================= */
 .care-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,16 +84,14 @@
   }
 }
 
-/* =========================
-   BOTÃO
-========================= */
 .care-button {
+  font-family: "Marcellus", serif;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   background-color: #E0B1A9;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 400;
   padding: 14px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -122,9 +111,6 @@
   filter: brightness(0) invert(1);
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
 @media (max-width: 768px) {
   .care-section {
     padding: 0 0 80px;
@@ -149,10 +135,10 @@
   }
 
   .care-card {
-    text-align: left; // mantém o texto legível
+    text-align: left;
 
     h4 {
-      text-align: center; // ✅ TÍTULO CENTRALIZADO NO MOBILE
+      text-align: center; 
     }
   }
 }
